@@ -254,8 +254,12 @@ function showPhrase(heartEl) {
   const tag = document.createElement('div');
   tag.className = 'heart-phrase';
   tag.textContent = phrase;
-  tag.style.left = heartEl.style.left;
-  tag.style.top  = parseInt(heartEl.style.top || 0) + 'px';
+  const rect = heartEl.getBoundingClientRect();
+  const areaRect = gameArea.getBoundingClientRect();
+  const top = Math.max(10, rect.top - areaRect.top - 10);
+  const left = Math.min(rect.left - areaRect.left, gameArea.offsetWidth - 100);
+  tag.style.left = left + 'px';
+  tag.style.top = top + 'px';
   gameArea.appendChild(tag);
   setTimeout(() => tag.remove(), 1300);
 }
