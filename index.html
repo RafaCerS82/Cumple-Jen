@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Feliz Cumpleaños, Alexia 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== INTRO SCREEN ===================== -->
+  <div id="intro-screen">
+    <div id="confetti-container"></div>
+    <div class="envelope-wrapper">
+      <div id="envelope" class="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-heart">❤️</div>
+        </div>
+        <button id="open-btn" class="open-btn">Abrir</button>
+      </div>
+      <p class="envelope-hint">Toca el sobre para abrir ✨</p>
+    </div>
+  </div>
+
+  <!-- ===================== MAIN PAGE ===================== -->
+  <div id="main-page">
+
+    <!-- Sound Toggle -->
+    <button id="sound-toggle" class="sound-btn" aria-label="Toggle sound">🔊</button>
+    <audio id="bg-music" src="audio/song.mp3" loop></audio>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-img-wrap">
+        <img src="images/foto1.jpg" alt="Foto principal" class="hero-img" />
+        <div class="hero-img-overlay"></div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-sub fade-up">Para el amor de mi vida</p>
+        <h1 class="hero-title fade-up delay-1">Jennifer Alexia</h1>
+        <p class="hero-signed fade-up delay-2">Con cariño, Rafa 🌹</p>
+      </div>
+      <div class="scroll-hint">↓</div>
+    </section>
+
+    <!-- ===== MESSAGE ===== -->
+    <section class="message-section" id="message-section">
+      <div class="message-inner">
+        <div class="message-deco">✦</div>
+        <div id="typewriter-text" class="typewriter-text"></div>
+      </div>
+    </section>
+
+    <!-- ===== MEMORY CARDS ===== -->
+    <section class="cards-section">
+      <h2 class="section-title fade-up">Nuestros momentos ✨</h2>
+      <div class="cards-grid">
+        <div class="memory-card fade-up delay-1">
+          <div class="card-icon">💬</div>
+          <h3>El día que cambió mi vida</h3>
+          <p>7 de marzo de 2025</p>
+        </div>
+        <div class="memory-card fade-up delay-2">
+          <div class="card-icon">💑</div>
+          <h3>Novios</h3>
+          <p>24 de julio de 2025</p>
+        </div>
+        <div class="memory-card fade-up delay-3">
+          <div class="card-icon">🐭</div>
+          <h3>Para mi ratita, Alesia</h3>
+          <p>Eres una increíble mujer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHOTO COLLAGE ===== -->
+    <section class="collage-section">
+      <h2 class="section-title fade-up">Nuestras fotos 📸</h2>
+      <div class="collage-grid">
+        <div class="collage-item item-1 fade-up" onclick="openLightbox('images/foto2.jpg')">
+          <img src="images/foto2.jpg" alt="Recuerdo 1" />
+          <div class="collage-overlay">Ver foto</div>
+        </div>
+        <div class="collage-item item-2 fade-up delay-1" onclick="openLightbox('images/foto3.jpg')">
+          <img src="images/foto3.jpg" alt="Recuerdo 2" />
+          <div class="collage-overlay">Ver foto</div>
+        </div>
+        <div class="collage-item item-3 fade-up delay-2" onclick="openLightbox('images/foto4.jpg')">
+          <img src="images/foto4.jpg" alt="Recuerdo 3" />
+          <div class="collage-overlay">Ver foto</div>
+        </div>
+        <div class="collage-item item-4 fade-up delay-3" onclick="openLightbox('images/foto5.jpg')">
+          <img src="images/foto5.jpg" alt="Recuerdo 4" />
+          <div class="collage-overlay">Ver foto</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">✕</span>
+      <img id="lightbox-img" src="" alt="Foto grande" />
+    </div>
+
+    <!-- ===== COUNTER ===== -->
+    <section class="counter-section fade-up">
+      <div class="counter-inner">
+        <div class="counter-heart">❤️</div>
+        <p class="counter-text">Han pasado</p>
+        <span class="counter-number" id="day-counter">0</span>
+        <p class="counter-text">días desde que empezamos a hablar.</p>
+      </div>
+    </section>
+
+    <!-- ===== MINI GAME ===== -->
+    <section class="game-section">
+      <h2 class="section-title fade-up">Mini juego 🎮</h2>
+      <p class="game-instruction fade-up">¡Toca los corazones que caen!</p>
+      <div id="game-area" class="game-area">
+        <div id="game-score" class="game-score">0 / 10</div>
+        <button id="start-game-btn" class="start-game-btn">Iniciar juego ❤️</button>
+      </div>
+      <div id="game-win" class="game-win hidden">
+        <p class="win-msg-1">Ganaste mi corazón desde el inicio.</p>
+        <p class="win-msg-2">Gracias por existir. Feliz cumpleaños, Alesia. 🎂</p>
+        <div id="final-hearts" class="final-hearts"></div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <p>Hecho con todo mi amor para ti 🌹</p>
+      <p class="footer-sub">Rafa — 2025</p>
+    </footer>
+
+  </div><!-- end #main-page -->
+
+  <script src="script.js"></script>
+</body>
+</html>
