@@ -108,13 +108,13 @@ function initIntersectionObservers() {
 /* ---------- TYPEWRITER ---------- */
 const MESSAGE = `Hola amor,
 
-Dime lo que quieras pero llevo esperando este día con mucha emoción jajaja, creeme que desde que llegaste a mi vida, tomaste muchísima más relevancia de la que creí que podía tomar una persona a estas alturas de mi vida, pero me gusta como no te imaginas
+Dime lo que quieras pero llevo esperando este día con mucha emoción jajaja, créeme que desde que llegaste a mi vida, tomaste muchísima más relevancia de la que creí que podía tomar una persona a estas alturas de mi vida, lo mejor es que me gusta como no te imaginas.
 
-El panorama de lo que tenemos es muy bonito, parace que cuento los días en que lleguemos a todas las promesas y deseos de lo que ambos hemos hablado. También prometo disfrutar mucho todos los días a tu lado, porque hasta en lo que pudiera parecer simple, yo encuentro felicidad cuando se trata de ti.
+El panorama de lo que tenemos es muy bonito, parece que cuento los días en que lleguemos a todas las promesas y deseos de lo que ambos hemos hablado. También prometo disfrutar mucho todos los días a tu lado, porque hasta en lo que pudiera parecer simple, yo encuentro felicidad cuando se trata de ti.
 
-Amor de mi vida, espero que este cumpleaños a tu lado sea el primero de muchos, te deseo mucha salud, mucha felicidad, mucho éxito, estar rodeada de excelentes personas como lo eres, y que te lo bueno del mundo recaiga sobre ti.
+Amor de mi vida, espero que este cumpleaños a tu lado sea el primero de muchos, te deseo mucha salud, mucha felicidad, mucho éxito, estar rodeada de excelentes personas como lo eres, y que todo lo bueno del mundo recaiga sobre ti.
 
-Espero seguir viéndote crecer agarrados de la mano. Te amo mucho Alexia de mi corazón ❤️`;
+Espero seguir viéndote crecer agarrados de la mano. Te amo mucho Alexia de mi corazón, eres lo mejor que le pudo pasar a mi vida. ❤️`;
 
 function startTypewriter() {
   const el = document.getElementById('typewriter-text');
